@@ -1,0 +1,25 @@
+[project]
+name = "project-breakdown"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=0.3.26",
+    "langchain-google-genai>=2.1.6",
+    "langchain-community>=0.0.30",
+    "langgraph>=0.5.1",
+    "matplotlib>=3.10.3",
+    "numpy>=2.3.1",
+    "pillow>=11.3.0",
+    "python-dotenv>=1.1.1",
+    "torch>=2.7.1",
+    "torchvision>=0.22.1",
+    "transformers>=4.53.1",
+    "google-api-python-client>=2.136.0",
+    "plotly>=5.22.0",
+    "pandas>=2.2.2",
+    "langchain-groq>=0.1.0", # Added for Groq integration
+    "fastapi[standard]>=0.115.14",
+    "supabase>=2.16.0",
+]

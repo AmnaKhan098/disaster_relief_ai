@@ -1,0 +1,87 @@
+Metadata-Version: 2.4
+Name: project-breakdown
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: langchain>=0.3.26
+Requires-Dist: langchain-google-genai>=2.1.6
+Requires-Dist: langchain-community>=0.0.30
+Requires-Dist: langgraph>=0.5.1
+Requires-Dist: matplotlib>=3.10.3
+Requires-Dist: numpy>=2.3.1
+Requires-Dist: pillow>=11.3.0
+Requires-Dist: python-dotenv>=1.1.1
+Requires-Dist: torch>=2.7.1
+Requires-Dist: torchvision>=0.22.1
+Requires-Dist: transformers>=4.53.1
+Requires-Dist: google-api-python-client>=2.136.0
+Requires-Dist: plotly>=5.22.0
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: langchain-groq>=0.1.0
+
+# U-Net for Building Damage Segmentation with xView2
+
+This project provides a Jupyter Notebook to train a U-Net model for segmenting building damage in satellite images from the xView2 dataset. The model is designed to identify and classify damage levels (no damage, minor damage, major damage, destroyed) in pre- and post-disaster imagery.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+*   Python 3.x
+*   Jupyter Notebook or JupyterLab
+*   The xView2 dataset
+
+### Installation
+
+1.  **Clone the repository (or download the files):**
+
+    ```bash
+    git clone <repository-url>
+    cd xView2-UNet-Segmentation
+    ```
+
+2.  **Download the xView2 Dataset:**
+
+    You need to download the dataset from one of the following sources:
+    *   **xView2 Challenge Website:** [https://xview2.org/](https://xview2.org/)
+    *   **Kaggle:** [https://www.kaggle.com/c/xview2-building-damage-assessment/data](https://www.kaggle.com/c/xview2-building-damage-assessment/data)
+
+    After downloading, extract the dataset to a known location.
+
+3.  **Install dependencies:**
+
+    The required Python libraries can be installed via pip. The notebook itself contains a cell to do this:
+
+    ```python
+    !pip install tensorflow opencv-python numpy matplotlib
+    ```
+
+## Usage
+
+1.  **Update the data path:**
+
+    Open the `xView2_UNet_Segmentation.ipynb` notebook and update the `DATA_PATH` variable to point to the directory where you extracted the xView2 dataset.
+
+    ```python
+    # Set the path to the xView2 dataset
+    DATA_PATH = "/path/to/your/xview2/dataset"
+    ```
+
+2.  **Run the notebook:**
+
+    Execute the cells in the notebook sequentially to:
+    *   Load and preprocess the data.
+    *   Define and compile the U-Net model.
+    *   Train the model.
+    *   Evaluate the training progress and visualize predictions.
+
+## Model Architecture
+
+The model used is a U-Net, a convolutional neural network architecture designed for biomedical image segmentation. Its architecture consists of an encoder path to capture context and a symmetric decoder path that enables precise localization.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details (if applicable).
